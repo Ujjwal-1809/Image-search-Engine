@@ -1,0 +1,278 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.no-results {
+    height: 20px;
+    color: white;
+    position: relative;
+    left: 475px;
+    font-size: 20px;
+    font-family: 'Cinzel', serif;
+}
+.empty{
+    background-color: #00002A;
+}
+span{
+    font-size: 50px
+}
+.page{
+background-color: #00002A;
+height: auto;
+width: 100%;
+display: grid;
+grid-template-rows:100px 100px 100px auto 30px;
+letter-spacing: 3px;
+}
+
+.app_name{
+    display: flex;
+    align-items: start;
+    margin-left: 20px;
+}
+
+#logo{
+    height: 80px;
+    width: 80px;
+    margin-top: 6px;
+}
+ .name{
+    margin-top: 9px;
+    font-family: "Spicy Rice", serif;
+  font-weight: 400;
+  font-size: 45px;
+  font-style: normal;
+    background-image: url(./imgs/pexels-pixabay-314726.jpg);
+    font-style: normal;
+    background-size: cover;
+    background-clip: text;
+    color: transparent;
+ }
+ .head{
+    font-size: 35px;
+    color: rgb(253, 252, 252);
+    justify-self: center;
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    align-self: center;
+ }
+ .input_btn{
+    justify-self: center;
+    position: relative;
+ }
+
+ input{
+    height: 45px;
+    width: 400px;
+    border: none;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    outline: none;
+    padding-left: 15px;
+    font-family: "Gowun Batang", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+ }
+
+ input::placeholder{
+    font-weight: 400;
+ }
+
+ #searchBtn{
+    height: 45px;
+    width: 45px;
+    border: none;
+    position: absolute;
+    right: 0;
+    border-radius: 40px;
+    cursor: pointer;
+    background-color: lightgray;
+    font-size: 16px;
+ }
+ #searchBtn:hover{
+    background-color: grey;
+ }
+ #imgID{
+    height: 230px;
+    width: 300px;
+    object-fit: cover;
+ }
+ .results{
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: repeat(3, 1fr);
+row-gap: 12px;
+min-height: 200px;
+width: 100%;
+}
+
+.results img{
+    justify-self: center;
+    align-self: center;
+    border: 2px solid white;
+    transition: transform 0.5s ease;
+}
+.results img:hover{
+    transform: scale(0.95);
+}
+#loadbtn{
+    height: 35px;
+    width: 130px;
+    cursor: pointer;
+    border: none;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    color: white;
+    background-color: red;
+    font-size: 16px;
+    font-weight: 600;    
+font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#loadbtn:hover{
+    background-color: darkred;
+}
+#lbtn{
+    background-color: #00002A;
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    align-items: start;
+    display: none;
+}
+.defimg{
+    height: 230px;
+    width: 300px;
+    object-fit: cover;
+}
+
+
+/* media query (tablet) */
+
+@media only screen and (min-width: 630px) and (max-width: 800px) {
+    .results{
+      grid-template-columns: 1fr; 
+      row-gap: 25px;   
+    }
+
+    #imgID{
+        height: 400px;
+        width: 600px;
+        object-fit: cover;
+     }
+
+     .results img{
+        justify-self: center;
+        align-self: center;
+        border: 2px solid white;
+        height: 400px;
+        width: 600px;
+        object-fit: cover;
+        margin-top: 30px;
+    }
+    .app_name{
+        justify-content: center;
+    }
+    input{
+        height: 55px;
+        width: 450px;
+        margin-top: 30px;
+
+    }
+    #searchBtn{
+        height: 55px;
+        width: 55px;
+        margin-top: 30px;
+
+    }
+    .head{
+       width: 590px;
+    }
+    span{
+        font-size: 40px;
+        margin-left: 30%;
+    }
+    .no-results {
+        height: 100px;
+        color: white;
+        margin-top: 30px;
+        position: relative;
+        left: 275px;
+        width: 300px;
+        font-size: 20px;
+        font-family: 'Cinzel', serif;
+    }
+}
+
+/* phone media query */
+
+@media (max-width: 629px) {
+
+
+.results{
+    grid-template-columns: 1fr;
+    row-gap: 15px;
+    margin-top: 25px;
+}
+
+.results img{
+    width: 350px;
+}
+
+input{
+    width: 300px;
+    margin-top: 30px;
+
+}
+#searchBtn{
+margin-top: 30px;
+}
+.name{
+    width: 200px;
+    font-size: 35px;
+}
+.head{
+    width: 380px;
+    font-size: 25px;
+text-align: center;
+}
+
+span{
+    font-size: 39px;
+    margin: 0;
+}
+#logo{
+    height: 60px;
+    width: 50px;
+    margin-top: 6px;
+}
+.app_name{
+    justify-self: center;
+}
+
+#imgID{
+    width: 350px;
+}
+.no-results {
+    height: 100px;
+    color: white;
+    position: relative;
+    left: 55px;
+    font-size: 20px;
+    width: 300px;
+    font-family: 'Cinzel', serif;
+}
+}
+
+@media only screen and (min-height: 800px) and (max-width: 1200px){
+.results{
+    min-height: 60vh;
+}
+}
